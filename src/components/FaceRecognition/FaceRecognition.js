@@ -13,7 +13,7 @@ const FaceRecognition = ({ imageUrl, boxes }) => {
 			)
 			}
 				<div>
-					{`Human Face Deteced: ${boxes.length}`}
+					{`Human Face Detected: ${boxes.length}`}
 				</div>
 
 			</div>
