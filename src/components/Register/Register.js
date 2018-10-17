@@ -16,7 +16,7 @@ class Register extends React.Component {
 	}
 	
 	onEmailChange = (event) => {
-		this.setState({email: event.target.value});
+		this.setState({email: event.target.value.toLowerCase()});
 	}
 	
 	onPasswordChange = (event) => {

@@ -10,7 +10,7 @@ class Signin extends React.Component {
 		}
 	}
 	onEmailChange = (event) => {
-		this.setState({signInEmail: event.target.value});
+		this.setState({signInEmail: event.target.value.toLowerCase()});
 	}
 	
 	onPasswordChange = (event) => {
