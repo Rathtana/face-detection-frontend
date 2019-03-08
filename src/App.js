@@ -8,6 +8,14 @@ import Signin from './components/Signin/Signin'
 import Register from './components/Register/Register'
 import './App.css';
 
+const isEmpty = (obj) => {
+  for(let key in obj) {
+      if(obj.hasOwnProperty(key))
+          return false;
+  }
+  return true;
+}
+
 const initialState = {
   input: '',
   imageUrl: '',
@@ -38,7 +46,13 @@ class App extends Component {
 		}})
 	}
   
+
   calculateFaceLocation = (data) => {
+    //no face detected 
+    if (isEmpty(data.outputs[0].data)) {
+      return [];
+    }
+
     const image = document.getElementById('inputImage');
     const width = Number(image.width);
     const height = Number(image.height);
